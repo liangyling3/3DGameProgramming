@@ -33,8 +33,7 @@ namespace Com.Mygame {
 		
 		readonly float move_speed = 15;
 
-		// change frequently
-		int moving_status;	// 0->not moving, 1->moving to middle, 2->moving to dest
+		int moving_status;	// 0:不移动 1:上船, 2:下船
 		Vector3 dest;
 		Vector3 middle;
 
@@ -84,7 +83,7 @@ namespace Com.Mygame {
 
 
 		public MyCharacterController(string which_character) {
-			
+			// 载入预制
 			if (which_character == "priest") {
 				character = Object.Instantiate (Resources.Load ("Perfabs/Priest", typeof(GameObject)), Vector3.zero, Quaternion.identity, null) as GameObject;
 				characterType = 0;
