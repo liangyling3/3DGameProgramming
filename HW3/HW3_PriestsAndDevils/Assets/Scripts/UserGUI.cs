@@ -13,21 +13,24 @@ public class UserGUI : MonoBehaviour {
 		action = Director.getInstance ().currentSceneController as UserAction;
 
 		style = new GUIStyle();
-		style.fontSize = 40;
+		style.fontSize = 30;
 		style.alignment = TextAnchor.MiddleCenter;
 
 		buttonStyle = new GUIStyle("button");
-		buttonStyle.fontSize = 30;
+		buttonStyle.fontSize = 25;
 	}
+
+
 	void OnGUI() {
 		if (status == 1) {
-			GUI.Label(new Rect(Screen.width/2-50, Screen.height/2-85, 100, 50), "Gameover!", style);
+			GUI.Label(new Rect(Screen.width/2-50, Screen.height/2-85, 100, 50), "Game Over!", style);
 			if (GUI.Button(new Rect(Screen.width/2-70, Screen.height/2, 140, 70), "Restart", buttonStyle)) {
 				status = 0;
 				action.restart ();
 			}
-		} else if(status == 2) {
-			GUI.Label(new Rect(Screen.width/2-50, Screen.height/2-85, 100, 50), "You win!", style);
+		} 
+		else if(status == 2) {
+			GUI.Label(new Rect(Screen.width/2-50, Screen.height/2-85, 100, 50), "Win", style);
 			if (GUI.Button(new Rect(Screen.width/2-70, Screen.height/2, 140, 70), "Restart", buttonStyle)) {
 				status = 0;
 				action.restart ();
