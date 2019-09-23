@@ -177,7 +177,7 @@ public class Move : MonoBehaviour
 	- 以黑色球体代表devils，白色正方体代表priests。
 	
 - 使用 C# 集合类型 有效组织对象
-- 整个游戏仅 主摄像机 和 一个 Empty 对象， 其他对象必须代码动态生成！！！ 整个游戏不许出现 Find 游戏对象， SendMessage 这类突破程序结构的通讯耦合语句。 违背本条准则，不给分
+- 整个游戏仅主摄像机和一个 Empty 对象， 其他对象必须代码动态生成！！！ 整个游戏不许出现 Find 游戏对象， SendMessage 这类突破程序结构的通讯耦合语句。 违背本条准则，不给分
 - 请使用课件架构图编程，不接受非 MVC结构程序
 	- Model：场景中的所有GameObject，它们受到Controller的控制。
 	- View：UserGUI和ClickGUI，提供用户交互的界面和动作。

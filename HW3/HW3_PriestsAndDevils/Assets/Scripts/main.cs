@@ -165,18 +165,21 @@ namespace Com.Mygame {
 		readonly Vector3 from_pos = new Vector3(5, 1, 0);
 		readonly Vector3 to_pos = new Vector3(-5, 1, 0);
 		int to_from; // to：-1 from：1
+
 		// 一次只允许乘坐两人
 		MyCharacterController[] passenger = new MyCharacterController[2];
 
 		public BoatController() {
 			to_from = 1;
 
-			from_positions = new Vector3[] {new Vector3(4.5F, 1.5F, 0), new Vector3(5.5F, 1.5F, 0)};
-			to_positions = new Vector3[] {new Vector3(-5.5F, 1.5F, 0), new Vector3(-4.5F, 1.5F, 0)};
+			from_positions = new Vector3[] {new Vector3(4.5f, 1.5f, 0), new Vector3(5.5f, 1.5f, 0)};
+			to_positions = new Vector3[] {new Vector3(-5.5f, 1.5f, 0), new Vector3(-4.5f, 1.5f, 0)};
 
+			// 载入预制
 			boat = Object.Instantiate (Resources.Load("Perfabs/Boat", typeof(GameObject)), from_pos, Quaternion.identity, null) as GameObject;
 			boat.name = "boat";
 
+			// 挂载脚本
 			movingScript = boat.AddComponent(typeof(Moving)) as Moving;
 			boat.AddComponent(typeof(ClickGUI));
 		}
@@ -230,7 +233,8 @@ namespace Com.Mygame {
 			int emptyIndex = getEmptyIndex();
 			if (to_from == -1) {
 				pos = to_positions[emptyIndex];
-			} else {
+			} 
+			else {
 				pos = from_positions[emptyIndex];
 			}
 			return pos;
@@ -243,9 +247,9 @@ namespace Com.Mygame {
 		public MyCharacterController GetOffBoat(string passenger_name) {
 			for (int i = 0; i < passenger.Length; i++) {
 				if (passenger[i] != null && passenger[i].getName() == passenger_name) {
-					MyCharacterController charactorCtrl = passenger[i];
+					MyCharacterController _characterController = passenger[i];
 					passenger[i] = null;
-					return charactorCtrl;
+					return _characterController;
 				}
 			}
 			return null;
@@ -255,10 +259,9 @@ namespace Com.Mygame {
 		public int[] getCharacterNum() {
 			int [] count = {0, 0};
 			for (int i = 0; i < passenger.Length; i++) {
-				if (passenger [i] == null)
+				if (passenger[i] == null)
 					continue;
-				
-				if (passenger [i].getType() == 0) 	// 0：priest 1：devil
+				if (passenger[i].getType() == 0) 
 					count[0]++;
 				else 
 					count[1]++;
@@ -323,19 +326,19 @@ namespace Com.Mygame {
 			characterOnCoast[index] = _characterController;
 		}
 
-		public MyCharacterController getOffCoast(string passenger_name) {	// 0->priest, 1->devil
+		public MyCharacterController getOffCoast(string passenger_name) {
 			for (int i = 0; i < characterOnCoast.Length; i++) {
 				if (characterOnCoast[i] != null && characterOnCoast[i].getName () == passenger_name) {
-					MyCharacterController charactorCtrl = characterOnCoast[i];
+					MyCharacterController _characterController = characterOnCoast[i];
 					characterOnCoast[i] = null;
-					return charactorCtrl;
+					return _characterController;
 				}
 			}
 			return null;
 		}
 
 		public int[] getCharacterNum() {
-			int[] count = {0, 0};
+			int [] count = {0, 0};
 			int len = characterOnCoast.Length;
 			for (int i = 0; i < len; i++) {
 				if (characterOnCoast[i] == null)
