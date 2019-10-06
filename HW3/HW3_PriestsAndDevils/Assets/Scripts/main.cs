@@ -148,7 +148,7 @@ namespace Com.Mygame {
 
 		// 重新开始
 		public void reset() {
-			movingScript.reset ();
+			movingScript.reset();
 			coastController = (Director.getInstance().currentSceneController as FirstController).fromCoast;
 			getOnCoast(coastController);
 			setPosition(coastController.getEmptyPosition());
