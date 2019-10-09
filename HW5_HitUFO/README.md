@@ -1,4 +1,4 @@
-﻿(游戏效果视频预览)[https://v.youku.com/v_show/id_XNDM5MTk5OTM1Mg==.html?spm=a2h3j.8428770.3416059.1]
+﻿[游戏效果视频预览](https://v.youku.com/v_show/id_XNDM5MTk5OTM1Mg==.html?spm=a2h3j.8428770.3416059.1)
 ## 编写一个简单的鼠标打飞碟（Hit UFO）游戏
 
 ### 游戏内容要求：
