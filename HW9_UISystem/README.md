@@ -1,4 +1,8 @@
-﻿## 血条（Health Bar）的预制设计。
+﻿## 视频演示
+[优酷](https://v.youku.com/v_show/id_XNDQ5NTY2ODIwNA==.html?spm=a2h3j.8428770.3416059.1)
+
+
+## 血条（Health Bar）的预制设计。
 具体要求如下：
 - 分别使用 IMGUI 和 UGUI 实现
 - 使用 UGUI，血条是游戏对象的一个子元素，任何时候需要面对主摄像机

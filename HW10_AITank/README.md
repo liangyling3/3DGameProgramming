@@ -1,4 +1,8 @@
-﻿## 坦克对战游戏 AI 设计
+﻿## 视频演示
+[优酷](https://v.youku.com/v_show/id_XNDQ5NTY2ODUyMA==.html?spm=a2h3j.8428770.3416059.1)
+
+
+## 坦克对战游戏 AI 设计
 
 从商店下载游戏：“Kawaii” Tank 或 其他坦克模型，构建 AI 对战坦克。具体要求：
 - 使用“感知-思考-行为”模型，建模 AI 坦克
