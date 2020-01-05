@@ -9,10 +9,6 @@ public class Player : MonoBehaviour
     {
         gameObject.GetComponent<Rigidbody>().freezeRotation = true;
         gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-       /* if (transform.position.y != 0)
-        {
-            transform.position = new Vector3(transform.position.x, 0, transform.position.z);
-        }*/
 
     }
 }
